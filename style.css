@@ -100,3 +100,24 @@ article {
   grid-row: span 3;
   margin: 0px;
 }
+
+.experiences {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.experiences-description {
+  font-style: italic;
+}
+
+.experiences-divider {
+  color: var(--color-accent);
+}
+
+hr {
+  height: 5px;
+  border-width: 0;
+  color: var(--color-accent);
+  background-color: var(--color-accent);
+}
