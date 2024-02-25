@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Anne Gvozdjak</strong> — <em>annegv@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Exclusionary Zoning</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>Which municipalities most prominently have single-family zoning laws? In particular, are single-family zoning laws in Boston concentrated amongst certain municipalities, or are they distributed relatively evenly across all municipalities, especially in consideration of the size of the affected population within a municipality? Is there a geographic pattern to the distribution? I'm curious to investigate this because of my own personal experience in Washington state, where there is complexity to zoning laws not only within Seattle proper, but also (and especially) amongst cities on the eastside (e.g., Bellevue, Redmond, Renton, Tacoma, etc.). In these cities one can more prominently see a wealth gap and lack of housing affordability even more apparently. I'd be interested to know what the distribution looks like for municipalities in Boston.</li>
+				<li>Are zoning laws tied to any specific urban planning features, such as public transportation locations, major highways, waterways, schools, industrial regions, etc? If so, are different types of urban planning features consistently considered more "desirable" to single-family zoning in Boston? I'm interested in this after reading the provided New York Times article (<i>Cities Start to Question an American Ideal</i>), which highlighted key urban planning features such as a new light rail (in LA), an industrial area (in North Carolina), and a major state route (in Georgia) as part of annotations in their visualizations.</li>
+				<li>What is the racial demographic of different municipalities, and are there patterns across municipalities with more restrictive zoning laws? Does the data indeed seem to indicate that single-family zoning laws do indeed disproportionately affect populations of color? I'd like to investigate this after reading and watching "Exclusionary by Design", where they discussed how intertwined zoning laws have been to the problem of affordable housing over the past decade in Boston. I'd like to look at race specifically considering that I've seen Boston additionally have a reputation of being a predominantly white city from my friends out of Massachusetts, and I wonder to see how that might appear in the data between different municipalities.</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img src="images/viz0.jpg" alt="" width="1000"/>
+				<figcaption>
+					I first had a look to see what the rough geographic distribution of the municipalities is. There are 101 unique municipalities in the dataset, which suggests that approximately 50% of municipalities have data for both single-family and non-single-family zoning restrictions. It appears that there is good coverage of east Massachusetts in the dataset, although certain geographic areas appear to lack data or are otherwise not included in a municipality; I'd be curious to know if this is because the land is otherwise protected or inhabitable (e.g. a state park or a body of water), if they are accounted for in a different way, or if there is some other error. This visualization additionally indicates the municipalities containing at least one zone with some single-family restrictions in brown. I don't notice any significant or consistent geographic pattern, although it does appear that municipalities with single-family zoning laws appear to be suburban. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/viz1.jpg" alt="" width="1000"/>
+				<figcaption>
+				I then began to investigate population data. The above visualizations show (1) the population distribution across all municipalities, with one standout outlier (Boston) followed by (2) the population distribution excluding the municipality of Boston, visualized in order to better see the actual distribution. I thought that the population counts looked reasonable scale-wise and relatively well-distributed, and the outlier for Boston made sense. However, when I repeated the visualizations to look at rows containing only single-family zoning, some populations looked abnormally low (Essex at 9 people, for instance). This might suggest some errors or typos in the population data (altneratively, there may be a story for why a handful of numbers look very small).
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/viz2.jpg" alt="" width="1000"/>
+				<figcaption>
+				To both dive deeper into the tiny population counts found in the prior visualization, as well as to investigate my first guiding question, I focused specifically on municipalities with both types of zoning laws, and compared the population counts for either zoning type. I was intrigued to see that although many municipalities with both zoning types are split somewhat evenly between the categories, there are a significant number of municipalities that are almost entirely either "not single family" or entirely "single family," with just a very small population under the other category: Revere, Gloucester, Reading, and Pembroke are examples, and suspect that these municipalities just contain a handful of zones that lie under a different zone classification than the remainder. To better understand why that might be the case, a deep dive into the political and geographical history of a municipality would likely be required.  
+				</figcaption>
+			</figure>
+
+
+			<figure>
+				<img src="images/viz5.jpg" alt="" width="1000"/>
+				<figcaption>
+				For more map-based visualizations, I wanted to rely on percent of land single-family-zoned, rather than looking at percentages of population every time, since I imagine that land percentages might be more stable and reliable than recording and tracking households and their sizes. However, I wanted to double check that the land percentage data roughly aligned with some of my takeaways based on population. This visualization, which explores the data, suggests that that is indeed the case: we can see that the rows containing to single-family-zoned population information also contain high percentages of single-family-zoned land, and vice versa. Interestingly, it also captures the per-municipality effect noticed in the prior visualization: the spikes at the histogram's 0-10% bucket indicate that indeed, many municipalites seem to have just a handful of zones that go against the overwhelming majority of policies in the rest of the municipality. This suggests that very small changes in zoning law may have been made or surrendered by municipalities in response to policy or public opinon. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/viz3.jpg" alt="" width="1000"/>
+				<figcaption>
+				Unfortunately, there wasn't a lot of available data to try and answer my second guiding question; the only external, urban infrastructure related information was MBTA community data. I mapped this out here, marking the non-MBTA communities in red. However, I immediately found that this data field isn't particularly useful. There are only four municipalities that aren't considered MBTA communities, and no differentiation between all of the remaining ones; additionally, the municipality of Boston itself isn't considered an MBTA community, which seems odd to me. I thus did some extra research about what MBTA communities are and how they were divided. In researching, it appears that new legislation is using them to enact new zoning laws. In particular, it appears that <a href="https://commonwealthbeacon.org/opinion/what-the-mbta-communities-law-means-for-your-town/" target="_blank">municipalities with proportionally higher access to transit will be required to add or change zones to allow for more multi-family housing units</a> as part of work done by Governor Healey in 2021 (<a href="https://www.bostonherald.com/2024/02/15/milton-to-face-legal-repercussions-lose-state-funding-after-rejecting-mbta-communities-act/" target="_blank">although this February 2024 news article suggests that some municipalities like Milton are bullishly refusing to comply</a>). Although I wasn't able to get any other data (for instance, the per-municipality thresholds to update zoning requirements, or even post-2021 zoning data) to extend my visualizations, these initial investigations allowed me to make some interesting discoveries. 
+				</figcaption>
+			</figure>
+
+
+			<figure>
+				<img src="images/viz4.png" alt="" width="1000"/>
+				<figcaption>
+				Despite the lack of data, I did want to try to annotate a map and investigate some urban planning patterns, in order to better understand the shape of the data. In particular, I looked at the locations of major cities (including Lowell, which amongst other towns in northern Massachusetts has historical significance as being influential industrially); and the locations of major Massachusetts highways and public transport systems. Visualized here are MBTA commuter rail routes, which to me represent a more accessible and affordable method of transport than a highway and thus were more interesting. There does not appear to be any significant relationship to my eye at first (although I admit I am not entirely familiar with Massachusetts geography beyond greater Boston), although one might hypothesize that areas with more single-family-zoned-land seem to be located closer to commuter rail routes. This could indicate that land nearer to rail routes might be seen as more residential or valuable to live in, and also suggests that people living in less restrictive areas may struggle more to find accessible commute. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/viz6.jpg" alt="" width="1000"/>
+				<figcaption>
+				In order to answer my final question, I first had a look at the distribution of population data by race. I chose to first investigate it visually, looking to see what sorts of zoning laws the municipalities with higher proportions of people of color tended to enforce. My first finding, in doing this was that Massachusetts is indeed predominantely white, especially outside of the greater Boston metro area. Although the map doesn't show clear pattern in the municipalities farther away from Boston, it does seem to indicate a correlation between having higher proportions of people of color, and having less restrictive zoning laws, in Boston and in the municipalities around it. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/viz7.jpg" alt="" width="1000"/>
+				<figcaption>
+				To look more closely at this data, I chose to plot it in a scatterplot, with each point representing one municipality. I looked at correlations between land zoning percentanges and different racial demographics, and in order to add some clarity to my investigation, here I chose to exclude municipalities that had the odd 0%-zoning-land data issue, reducing the clutter along the x-axis. Although there was no clear trend or pattern within different racial minority groups (for instance, you can see that circle size varies relatively randomly along the y-axis in the above visualization), the correlation that was somewhat visible in the map becomes much clearer. Municipalities with higher percentages of white people do indeed tend to also have more single-family-zoning restrictions. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/viz8.jpg" alt="" width="1000"/>
+				<figcaption>
+				Finally, I wanted to have a quick look at income data. Because there is a lot of income data, especially when looking across all the municipalities, I went through multiple iterations of visualizations, focusing on different subgroups of municipalities as well as different income brackets. Ultimately, I decided to further aggregate the income data into buckets beyond what the raw data had aggregated it into, aggregating across rows and then bucketing every $50k: although this loses some important information, especially on the lower-end of the income spectrum, I felt that such partitioning was best suited for a general visualization. This visualization furthermore only looks at income data for the single-family-zoned municipalities. It gave me two takeaways in particular. First, it appears that municipalities that do have single-family-zoned land tend to have very high percentages of it. Second, household incomes for these municipalities seem very high across the board, with a pretty large proportion of municipalities having near or over 50% of households with incomes $150K+, and all but a handful having near or over 50% of households with incomes $100K+. This finding supports the notion that single-family-zoning disproportionately affects lower-income households' abilities to find affordable housing. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="IMAGE_FILENAME" alt="" />
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>WRITE FINAL SUMMARY HERE.</p>
+		</section>
+	</main>
+</body>
+</html>
