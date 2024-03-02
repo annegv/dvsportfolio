@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Design
+		</h1>
+
+		<p>
+			<strong>Anne Gvozdjak</strong> — <em>annegv@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Phase One: Sketching Visualizations</h2>
+
+      <figure>
+				<img src="images/a3s1.jpg" alt="" width="1000"/>
+				<figcaption>
+					This visualization uses a stacked and grouped bar graph with population counts on the y-axis. It shows the distribution in population by age category over the x-axis, allows for comparison between sexes by looking at adjacent pairs of bars, and demonstrates the growth from 1900 to 2000 through the stacked bars. The axes are labeled and there is a key to allow for easy understanding of which bars and colors correspond to what. It additionally utilizes English languages annotations to call out the most interesting or significant changes in population. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>
+					I wanted to create a visualization in a format that is easily recognizable to all audiences, and thus more widely understandable; a bar graph does that well. Additionally, to preserve as much of what the original chart was attempting to communicate as possible, I made use of a lot of different marks and encoding types (bars, color shade, color intensity) to represent different dimensions.
+				</li>
+				<li>
+					I wanted this visualization to encapsulate the extreme population growth overall between 1900 and 2000 in the US, which I think it does successfully; the large swathe of area that is colored in the lighter colors consistently across the entire graph really demonstrates significant change immediately. 
+				</li>
+				<li>
+					I also wanted the audience to be able to compare female and male population counts both in 1900 and 2000. The bar graph does not do a great job at allowing audiences to compare raw increases in population, because the areas representing increase are not all aligned on one base axis. However, it does allow audiences to effectively look at each age group and see if there were more women or men for that age group, for both years.
+				</li>
+				<li>
+					Along that vein, I think the visualization does feel a little bit cluttered. Although the immediate takeaway (overwhelming growth) is visible, the sheer number of age groups, in addition to the other dimensions of sex and time, render the visualization somewhat hard to parse. I'd thus like to try to explore different ways to reduce this visual overload, potentially by creating more white space or by chunking the data into smaller groups and allowing for more annotation per group. 
+				</li>
+			</ul>
+
+      <figure>
+			<img src="images/a3s2.jpg" alt="" width="1000"/>
+				<figcaption>
+					This visualization uses area as its most defining feature. Each unit in the visualization corresponds to one age category in the original data; the left side of the unit corresponds to the number of males, and the right to the number of females. Growth can be seen by comparing the more darkly shaded inner parts to the more lightly shaded outer parts of the unit. It groups units in rows by more broad, rough age categories, and allows room for annotation per row. It additionally includes a "sub-visualization" showing total population counts by sex in 1900 and 2000. This allows audiences to have an extra, overview-like comparison. (Note that because area is hard to draw by hand, none of the units are to-scale in the sketch; and as the layout of the units was determined during sketching, it's not laid out perfectly.)
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>
+					I chose to use area since it provides a good way for audiences' eyes to both be drawn toward larger sections of the graph (those with higher population) and also notice sections that appear very small (those with very low population). Separating the bars from the prior graph and converting them into units of area allows for more space between the data included inside each age group, making it easier to look at visually. On the other hand, area is harder to compare visually than relative position. Also, using squares might be harder for audiences to estimate well across units; it might be preferable to use semicircles, rather than half-squares. 
+				</li>
+				<li>
+					I chose to group the units into rows by age category in order to chunk information, making it easier for audiences to first compare within a row to look for patterns, and then compare across rows to look for patterns. I think this visualization (when properly spaced on a larger sheet) is much easier to dive into than the bar graph.
+				</li>
+				<li>
+					Although the area is much harder for audiences to get an accurate estimate of exact population numbers, I thought the opportunity to annotate each row may be able to accomodate that deficiency. By giving the audiences the general area information to intepret themselves, I could direct their attention to messages or takeaways that were important in the annotations, and provide exact numbers only in the specific cases where they might be necessary. 
+				</li>
+				<li>
+					Additionally, although the overall comparison (bottom left in the sketch) provides interesting information in aggregate, I am not sure whether using the area encoding is particularly helpful for it, since the size of that unit alone will be much, much larger than all the rest. In particular, it will likely be hard for audiences to understand how any of the "parts" (age groups) compare in relation to the whole (aggregate total). 
+				</li>
+				<li>
+					In my next visualization, I'd like to specifically try to collapse or lose some information in order to have a simpler visualization. In addition, I'd like to pivot away from using area/shading, and instead just compare relative position, since that visual channel is considered most expressive. I'd also like to find a better way to include some aggregate information. 
+				</li>
+			</ul>
+
+      <figure>
+			<img src="images/a3s3.jpg" alt="" width="1000"/>
+				<figcaption>
+					This visualization can be separated into two parts. The first part, on the right, is the main section; it aggregates age group by every ten years and uses endpoints for 1900 and 2000, and arrows for growth. It allows for comparison between sexes with adjacent arrows. Annotations allow for the average in 1900 and 2000 to be shown, so that all the data can be compared against both averages. Then on the left, in order to compensate for the 10-year age-group aggregate, numbers indicate what percent of the population lie in the lower half of the age category (e.g., 0-5 vs 5-10 years old), in case audiences are interested in that extra information. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>
+					I wanted to generate this sketch to see how a more direct, positional comparison fared, in comparison to colored bars or colored areas. I took inspiration from the row grouping of the prior sketch to put broader age groups on the y-axis. I think that comparing positions vertically across age groups is visually easier than it was in the bar graph, although it might be confusing at first to audiences. 
+				</li>
+				<li>
+					I think this visualization allows audiences to both see the absolute comparison in population counts in 1900 and 2000, while also making it easy for them to estimate the difference in relative growth between any pair of data points. It definitely conveys the main message of growth, and comparison between sexes is done easily. 
+				</li>
+				<li>
+					I like having the added information on the right indicating percentage of people in the lower half of the age group, but I'm not sure if the concept is (1) too complicated to even understand clearly, or (2) valuable enough to include. Also, because of the format, only the split in the 1900 data is included; I'm not sure if the absence of 2000s data is confusing, or whether including 2000s data in an additional column would continue to clutter the visual. Similarly, I'm not sure if the two "average" line annotations are particularly valuable. 
+				</li>
+				<li>
+					It is a little harder to distinguish between the much smaller data values for the older age categories; I would be interested in seeing if using a logarithmic axis would help create visual separation, or if it would cause comparisons in the growth over time to be misleading. Similarly, I would be interested in seeing if ranking the data by population counts (e.g., by population in 1900, by population in 2000, or by absolute change) could help audiences see patterns more clearly, or whether the consecutively ordered y-axis is more clear. 
+				</li>
+			</ul>
+
+      <h3>Reflection</h3>
+
+      <p>
+        In part because the change in population is so drastic and unified across all age groups, I think that all of the visualizations are pretty good at evidencing that change. While the second visualization is perhaps the most interesting or eye-catching in passing, I also think it's the hardest to get an accurate read on for audiences; comparing areas, especially with so many of them, is pretty difficult. On the other hand, the third visualization is in a sense a twist on and an expansion of the first visualization's bar graph idea, and I like it a lot better. I think the aggregation to reduce the number of age groups very helpful. I also think that the idea of annotating more heavily, which I imagined for the bar graph, would be helpful in the final visualization: I'd like to analyze the data a little more closely to find any more interesting patterns that align with my original question, and to add those in on the graph in visual proximity to the parts of the visualization that are relevant. Finally, I think that attempts I made across all three graphs to include some benchmark information about how the numbers look "overall" were good attempts; I'd like to see whether labeling largest changes, including aggregated values, or calculating averages is the best way to go, and to include something along those lines. I'd thus like to take the third visualization and play with different elements from it, trying to make it visually clearer (through different color choices, mark shapes, and word choice for the axes labels/legend/title).
+      </p>
+
+		</section>
+
+		<section>
+			<h2>Phase Two: Final Design</h2>
+
+			<figure>
+				<img src="images/a3v5.png" alt="" width="1000"/>
+				<figcaption>
+				This visualization displays populations by the categorical dimensions of age and sex along the y-axis. For each category, the visualization shows growth from 1900 to 2000, using a linear x-axis scale. Sexes are colorized differently, and the 1900 and 2000 year values are identified with different mark shapes. Annotations add context and information, and a light gray line hints at the overall shape of the population distribution across ages.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+				I chose to focus my visualization on demonstrating the change between years (1900 to 2000) in population. It firstly makes the sheer amount of growth abundantly clear to audiences; it then also clearly shows how the shape of the population distribution across ages changed between years. These two impressions are the first, most overarching messages being conveyed. They answer the first part of my guiding question, which asks about how different age ranges' populations grew. The visualization then allows audiences to make specific comparisons about the growth between the different age and sex categories, exploring different patterns they might see. The annotations call out some potential answers to the second part of the question, drawing attention to what audiences might find to be interesting and allowing them to make judgments about the data themselves by looking at the visualizations' raw data itself.
+			</p>
+			<p>
+				To get to this final visualization, I iterated many times on visualization number three, and then ultimately returned to its loose framework (for instance, I had a version of this visualization that did not include any raw population counts at all, and instead only included percent change for audiences to compare). Ultimately, I chose to make the measures of the graph the raw population counts because I felt that it was important that audiences could see the raw data and form their own complete judgments. In addition to the raw scattered data, I also included gray "trendlines" at a very low intensity; after playing around with many different types of trendlines, I found that these were a good balance of not being distracting while also adding an immediate and clearly understandable first visual impression. 
+			</p>
+			<p>
+				For the x-axis, I retained a linear scale, after trying out a logarithmic one and determining that the benefits it brought for the age ranges with small populations were not worth the much more misleading comparisons overall; I do recognize that the age information for older populations (90+ especially) is thus rendered rather obscured. For the y-axis, I chose to label the categories as "Age Range", specifying the entire range rather than just the lower limit, and "Sex Reported", in order to call out the census' forced gender binary and acknowledge the likelihood of missing data. Ages were bucketed by every ten years in order to avoid making the graph too cluttered and confusing; while this obscures more fine-grain age information, I believe that it helps convey the answer to my guiding question more clearly. For the marks, I chose to use the purple and green colors to encode genders, avoiding the harmful stereotypes of pink and blue while making it much easier to visually group and distinguish between adjacent genders. I chose purple and green rather than green and yellow, for instance, to keep both colors at roughly equal intensities and darknesses. For census year, I chose to use squares and circles, in order to have more clear visual distinction between the shapes. All the encoding information was placed in a clear legend on the right, with a detailed note on how the census collected sex information. Finally, the subtitle and annotations (with their own titles) draw attention to just a few of the key points, making sure not to overwhelm audiences while providing some clear takeaways in case they need help discovering potential insights. While these annotations will heavily influence audiences' takeaways, and perhaps obscure their initial impressions, I believe that they are impartial enough that it should not negatively impact their impression of the data. 
+      		</p>
+
+      <h3>Reflection</h3>
+
+      <p>
+        Overall, Phase One significantly influenced my design for the assignment, and also changed the way I approached the final visualization overall. It allowed me to survey different options and weigh their different strengths without committing to one version too much, which saved a lot of time. As I iterated, I was able to internally evaluate different elements, and add them (or other things inspired by them) into the final visualization that I otherwise would not have thought of. For instance, the idea of bucketing ages by every 10 years originated only after iterating through designs, and I believe that it makes this final visualization significantly easier to parse. Additionally, deciding to use squares and circles as marks, rather than two types of circles, happened after I was reflecting on all three visualizations and drawing on their different marks. Perhaps more importantly than the comparison and creativity it inspired, though, was that working through different visualizations also helped increase my understanding of the data as a whole. It helped me weigh different parts of visualizations, thinking about which parts of the data were more or less important when communicating; and helped me think through how audiences might interpret or value different information upon being presented with it. Going through Phase One made me a lot more confident that my final visualization would be something that contained tangible and understandable takeaways, rather than just numbers thrown together in a picture format that I thought was pretty. 
+      </p>
+		</section>
+	</main>
+</body>
+</html>
