@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Anne Gvozdjak</strong> — <em>annegv@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: The number of worldwide climate disasters related to extreme temperatures has increased significantly over the past four decades.</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img src="images/a4viz1.jpg" alt="" width="1000"/>
+				<figcaption>
+					Bar chart indicating the number of disasters worldwide resulting from extreme weather for each five year period from 1980 to 2020. The data was fit with a linear trendline, and the trendline was drawn over the bars in a dashed line. Data is from the IMF's Climate-Related Disasters dataset. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>
+					Design Decision: Filling all country-level missing data values with 0 in order to aggregate worldwide, and not acknowledging that in the visualization [Score: -1]. While filling missing data values with zero is not deceptive on its own, in this particular dataset, the overwhelming majority of data information for each country was NaN. I chose to set them all to zero in order to be able to sum across all countries for worldwide data. However, although those decisions were earnest, the choice to not discuss their exclusion (especially considering the sheer number of NaNs) is pretty deceptive: the reader is left with no idea what the potential error bar due to missing data is for any of the data visualized.  
+				</li>
+				<li>
+					Design Decision: Transforming the data by grouping and aggregating it every five years, and visualizing only the five year totals [Score: -1]. I first visualized the data year-over-year, and although there was a general upward trend, it didn't look quite as persuasive as it perhaps could have. Thus, I decided to experiment with different levels of aggregation, and settled on five years entirely due to its visual persuasiveness. Although the aggregation itself is entirely transparent on the graph (i.e., I am not hiding the fact I did it), it obfuscates the original data, and was chosen with deliberate intent to do so, making it somewhat deceptive. 
+				</li>
+				<li>
+					Design Decision: Choosing to have strong verbage in the graph title and a bold, dark red color for the bars [Score: -0.5]. I wanted the graph's title to be provocative and emotionally-charged while remaining honest. Thus, after exploring more neutral options (rather like the graph's current subtitle) and more persuasive options, I settled on a title that does not directly state the proposition that is being made (i.e., that the number of disasters has been increasing), but that does certainly direct the reader toward to an emotional reaction of fear and anxiety. Additionally, in order to make sure the point of the graph is still clear, I decided to add a more objective subtitle clarifying its message underneath. Similarly, with the bars, I chose a bold, dark red, a color often associated with feelings of anger or danger, in order to make the bars jump out at the reader. 
+				</li>
+				<li>
+					Design Decision: Adding a linear trendline [Score: 1]. After graphing the bars, I felt as thought there may or may not be enough differentiation or growth between bars for readers to be convinced of a significant change. I subsequently played around with different y-axis limits and scales (e.g. a log scale), as well as with changing bar widths and spacing, in order to see if I could visually make a more convincing first impression. However, nothing really stuck, and ultimately I pivoted to the idea of a trendline. The trendline is somewhat misleading in that it uses the aggregated, five-year numbers to draw a trend (and thus is maybe not super insightful), but it is an earnestly and mathematically sound trendline, and thus does provide legitimate value to the reader that they may not see otherwise. The added benefit is that its slope looks steep, giving the impression of a larger increase over time. 
+				</li>
+				<li>
+					Design Decision: Adding the annotation to the 2015-2020 bar, and formatting it in the color and way I did [Score: -1]. I finished the visualization and felt as though the short 2015-2020 bar was sticking out like a sore thumb, and wanted to add something to remedy that. I thus added an annotation, making its background the same dark red as the bars, in order to create more color weight on the right side of the graph and to distract away from the shorter bar. While the annotation is entirely honest, it's pretty unnecessary, and singles out arbitrary data facts from a sea of many other possibilities. It additionally frames them with the purpose to scare rather than to inform (800% is shocking, and 9 feels tiny). I thus think it's pretty deceptive to have been included. 
+				</li>
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+				<img src="images/a4viz2.png" alt="" width="1000"/>
+				<figcaption>
+					Bar chart graphing the change in the number of climate disasters related to extreme temperature for each year, from the prior year. Data is from the IMF's Climate-Related Disasters dataset. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>
+					The same first design decision from visualization 1 applies here with regards to the missing data (I cleaned the dataset the same way for both visualizations).
+				</li>
+				<li>
+					Design Decision: Transforming the data by looking at raw change between each pair of consecutive years [Score: -2]. I considered various different ways of transforming the data in order to try to convince the audience of a more constant number of disasters. Ultimately, I went with this option because it felt most straightforward to understand (as opposed to a year over year percent change, for instance) while appearing to convey an overall random fluctuation between years to a general reader. The decision to look at raw change is misleading, though, because it does not at all capture any of the larger picture trends that are needed to think about the proposition clearly, and instead manipulates audiences to focus on and nitpick at (relatively arbitrary) small changes between years. 
+				</li>
+				<li>
+					Design Decision: Annotating the 2012/13 changes in blue [Score: -1]. One of the least convincing things about this graph with regards to what it is persuading is that the absolute value of the changes goes up as the years progress. Because attempting to filter data or change an axis scale felt too obvious, I instead wanted to just call that out immediately, reducing readers' need to come to their own conclusions. Although the annotation is entirely objective, calling the changes out like that created an opportunity to almost "set aside" that data in the readers' mind, using a pacifying message in the annotation's text and tone. 
+				</li>
+				<li>
+					Design Decision: Editing each bar in the bar graph to have an arrow shape at the tip [Score: 1]. When I finished the visualization initially, I felt as though the bar chart with rectangular bars didn't immediately evoke a sense of representing change, so I played around with different ideas on how to clearly indicate it was growth. I settled on changing the shape because it was a small change that felt easily familiar to wide audiences, indicating a sense of "growing upward" or "growing downward," which made the graph clearer. I thus feel that this change was earnest, allowing the graph to be more persuasive just by making it easier to interpret.
+				</li>
+				<li>
+					Design Decision: Using neutral language and colors in the headline and bars [Score: 0]. I played around with different phrasings for the headline and designs for the bars, and ultimately settled on something that felt pretty neutral, because options with stronger language felt like they were belittling the audience to clearly manipulate them. I think this can be considered as an earnest decision, because choosing more neutral language leaves more opportunity for the reader to come to their own conclusion without influences, in comparison to intentionally selecting more provocative language in the first visualization I made. 
+				</li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>
+		When I first began the task, I found it to be a lot more difficult than I anticipated. I found that determining what proposition to do on a large and entirely unknown dataset to be hard, since it felt like there was a huge realm of possibilities to potentially argue. Once I decided a proposition, constructing visualizations for the side of the proposition that I agreed with was much easier than for the side I disagreed with, which leads me to wonder whether my agreement led to any additional bias in how I ultimately decided to present the data. In particular, for the side I disagreed with, I had to iterate through many different ways to transform the data, while also considering that highly complex transformations would probably be much more difficult to visualize. However, as I worked, I found that more and more roads of opportunity opened up for me, and that there were far more ways to make persuasive impacts both large and small for both visualiations. For example, I found that simplying choosing slightly different words for my annotations (as well as deciding which parts of the data to annotate) had the potential to affect the tone with which readers encountered the data much more significantly than I anticipated. 
+	  </p>
+
+	  <p>
+		After doing this task, I think that the boundaries between acceptable and misleading persuasive choices are much less clear. While working, I personally decided that a lot of whether something might be misleading is due to intent when creating the visualization. In particular, having the intent to present data and then give space for the reader to come to their own conclusions is crucial. Along those lines, any single arbitrary or specific mark or annotation that is added because a visualization is entirely unpersuasive without it, is probably not acceptable; and takeaways from one visualization should probably be fairly replicable by other independent visualization artists for a graph to be acceptable. Ultimately, even the choice to not add an element or to leave something as a system default is still making a choice. No visualization exists in a vacuum: to do ethical analysis and visualization, the creator must consider their audience, purpose, and what the wider implications of making their certain visualization are, and take those things into account (perhaps even disclosing a specific intent alongside the graph to make it more ethical) when creating. 
+	  </p>
+    </section>
+	</main>
+</body>
+</html>
